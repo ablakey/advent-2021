@@ -1,0 +1,14 @@
+{
+  "name": "advent-2021",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "parcel --no-hmr ./src/index.html",
+    "validate": "tsc --noEmit",
+    "build": "parcel build"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {},
+  "dependencies": {}
+}
