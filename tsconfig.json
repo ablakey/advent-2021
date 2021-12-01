@@ -3,12 +3,11 @@
     "noImplicitAny": true,
     "strict": true,
     "esModuleInterop": true,
-    "jsx": "react-jsx",
     "resolveJsonModule": true,
     "moduleResolution": "node",
     "strictPropertyInitialization": false,
     "skipLibCheck": true,
     "target": "ES2021",
-    "module": "ESNext"
+    "module": "CommonJS"
   }
 }
