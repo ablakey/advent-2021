@@ -16,7 +16,7 @@ for (let x = 1; x < parsedInput.length; x++) {
   }
 }
 
-console.log(`Day 1 Answer 1 -- Depth measurements increased ${increases} times.`);
+console.log(`Part 1 -- Depth measurements increased ${increases} times.`);
 
 /**
  * Part 2
@@ -30,4 +30,4 @@ for (let x = 3; x < parsedInput.length; x++) {
   }
 }
 
-console.log(`Day 1 Answer 2 -- Sum depth measurements increased ${sumIncreases} times.`);
+console.log(`Part 2 -- Sum depth measurements increased ${sumIncreases} times.`);
