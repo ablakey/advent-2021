@@ -9,6 +9,9 @@
   },
   "author": "",
   "license": "ISC",
+  "prettier": {
+    "printWidth": 120
+  },
   "eslintConfig": {
     "parser": "@typescript-eslint/parser",
     "plugins": [

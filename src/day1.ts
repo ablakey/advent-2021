@@ -1,13 +1,33 @@
-import { promises as fs } from "fs";
+import fs from "fs";
 
-async function getInput() {
-  const input = await fs.readFile("./day1_input.txt", "utf-8");
-  const parsedInput = input
-    .split("\n")
-    .map((i) => Number.parseInt(i))
-    .filter((i) => !isNaN(i));
+/**
+ * Part 1
+ */
+const input = fs.readFileSync("./day1_input.txt", "utf-8");
+const parsedInput = input
+  .split("\n")
+  .map((i) => Number.parseInt(i))
+  .filter((i) => !isNaN(i));
 
-  return parsedInput;
+let increases = 0;
+for (let x = 1; x < parsedInput.length; x++) {
+  if (parsedInput[x] > parsedInput[x - 1]) {
+    increases++;
+  }
 }
 
-const x = getInput();
+console.log(`Day 1 Answer 1 -- Depth measurements increased ${increases} times.`);
+
+/**
+ * Part 2
+ */
+let sumIncreases = 0;
+for (let x = 3; x < parsedInput.length; x++) {
+  const windowA = parsedInput[x - 1] + parsedInput[x - 2] + parsedInput[x - 3];
+  const windowB = parsedInput[x] + parsedInput[x - 1] + parsedInput[x - 2];
+  if (windowB > windowA) {
+    sumIncreases++;
+  }
+}
+
+console.log(`Day 1 Answer 2 -- Sum depth measurements increased ${sumIncreases} times.`);
